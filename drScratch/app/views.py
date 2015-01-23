@@ -277,7 +277,9 @@ def processFormURL(request):
 				dicMetrics = analyzeProject(pathProject)
 				print dicMetrics
 				# Redirect to dashboard for unregistered user
-				return render_to_response("upload/dashboard-unregistered.html", dicMetrics)				
+				return render_to_response("upload/dashboard-unregistered.html", dicMetrics)
+	else:
+        	return HttpResponseRedirect("/")
 				
 def processStringUrl(url):
 	"""Process String of URL from Form"""
