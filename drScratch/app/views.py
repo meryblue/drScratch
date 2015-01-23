@@ -271,11 +271,8 @@ def processFormURL(request):
 				return HttpResponse('la url es incorrecta')
 			else:
 				fileName = sendRequestgetSB2(idProjectScratch)
-				print 'hola mundo!!!'
-				print fileName
 				pathProject = os.path.dirname(os.path.dirname(__file__))+ '/repo/' + fileName	
 				dicMetrics = analyzeProject(pathProject)
-				print dicMetrics
 				# Redirect to dashboard for unregistered user
 				return render_to_response("upload/dashboard-unregistered.html", dicMetrics)
 	else:
