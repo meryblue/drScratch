@@ -273,7 +273,7 @@ def processFormURL(request):
 				fileName = sendRequestgetSB2(idProjectScratch)
 				print 'hola mundo!!!'
 				print fileName
-				pathProject = '/home/test/github-desarrollo/drScratch/drScratch/repo/' + fileName	
+				pathProject = os.path.dirname(os.path.dirname(__file__))+ '/repo/' + fileName	
 				dicMetrics = analyzeProject(pathProject)
 				print dicMetrics
 				# Redirect to dashboard for unregistered user
