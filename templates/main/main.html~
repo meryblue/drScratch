@@ -1,125 +1,1010 @@
 <!DOCTYPE html>
-<html lan="es">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Dr. Scratch - automatic analysis of Scratch projects to assess the development of computational thinking</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/resources/images/favicon.ico"/>
-		
-		<!-- Bootstrap core CSS -->
-	    <link href="/resources/css/bootstrap.css" rel="stylesheet">
-	    <!-- Add custom CSS here -->
-	    <link href="/resources/css/sb-admin.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/resources/font-awesome/css/font-awesome.min.css">
-	    <link rel="stylesheet" type="text/css" href="/resources/custom/business-plate.css">
+<html class="nivo-lightbox-notouch" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><link href="resources/assets/css/css_002.css" rel="stylesheet" type="text/css"><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}</style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Bootstrap 3 Startup and Multipurpose Template">
+    <meta name="keywords" content="Stamp, Startup, Multipurpose, Bootstrap, Landing page, Template, Registration, Landing">
+    <meta name="author" content="Programamos URJC">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- SITE TITLE -->
+    <title>Dr.Scratch</title>
+
+    <!-- =========================
+     FAV AND TOUCH ICONS AND FONT  
+    ============================== -->
+    <link rel="icon" href="resources/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://templateocean.com/stamp/image-bg/2-home-style-two/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://templateocean.com/stamp/image-bg/2-home-style-two/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://templateocean.com/stamp/image-bg/2-home-style-two/images/favicons/favicon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="http://templateocean.com/stamp/image-bg/2-home-style-two/images/favicons/favicon-57.png">
+
+    <link href="resources/assets/css/css.css" rel="stylesheet">
+
+    <!-- =========================
+     STYLESHEETS   
+    ============================== -->
+    <!-- BOOTSTRAP AND ANIMATION -->
+    <link rel="stylesheet" href="resources/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/assets/css/animate.css">
+
+    <!-- FONT ICONS -->
+    <link rel="stylesheet" href="resources/assets/icons/icons.css">
+
+    <!-- CAROUSEL AND LIGHTBOX -->
+    <link rel="stylesheet" href="resources/assets/css/owl_002.css">
+    <link rel="stylesheet" href="resources/assets/css/owl.css">
+    <link rel="stylesheet" href="resources/assets/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="resources/assets/css/default.css">
+
+    <!-- CUSTOM STYLESHEETS -->
+    <link rel="stylesheet" href="resources/assets/css/styles.css">
+    
+    <!-- RESPONSIVE FIXES -->
+    <link rel="stylesheet" href="resources/assets/css/responsive.css">
+
+    <!-- COLORS -->
+    <!-- <link rel="stylesheet" id="color-switch" href="assets/css/blue.css"> -->
+    <!-- DEFAULT COLOR/ CURRENTLY USING -->
+     <link rel="stylesheet" href="resources/assets/css/red.css"> 
 
 
-		<!--Librería jQuery requerida para los plugins de Javascript-->
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<!--Todos los plugins Javascript de bootStrap-->
-		<script src="/resources/js/bootstrap.min.js"></script>
-		<script src="/resources/js/bootstrap-filestyle.js"></script>
-			
-	</head>	
-	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top" role="nanavbar-inversevigation">
-	      	<div class="container">
-	        	<div class="navbar-header">
-		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-	          	<a class="navbar-brand" href="#">Doctor Scratch (beta version)</a>
-	        	</div>
-		        <div color="#ff0" class="navbar-collapse collapse">
-	          		<form class="navbar-form navbar-right" role="form" method="post" action="/login">
-	          			{% csrf_token %}
-	            		<div class="form-group">
-	              		<input type="text" name="username" placeholder="Username" class="form-control">
-	            		</div>
-	            		<div class="form-group">
-	              		<input type="password" name="password" placeholder="Password" class="form-control">
-	           			</div>
-	            		<button type="submit" class="btn btn-success">Sign in</button>
-	          		</form>
-	        	</div><!--/.navbar-collapse -->
-      		</div>
-    	</div>
+    
 
+<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .standard-button,
+        .navbar-register-button {
+       filter: none;
+        }
+      </style>
+    <![endif]-->
+    <!-- ****************
+      After neccessary customization/modification, Please minify HTML/CSS according to http://browserdiet.com/en/ for better performance
+     **************** -->
+    <!--
+<script style="" src="assets/js/common.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/map.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/util.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/marker.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/onion.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/controls.js" charset="UTF-8" type="text/javascript"></script>
+<script src="assets/js/stats.js" charset="UTF-8" type="text/javascript"></script>
+-->
+    </head>
 
+<body>
 
-	    <!-- Main jumbotron for a primary marketing message or call to action -->
-	    <div class="jumbotron">
+    <!-- =========================
+     PRE LOADER       
+    ============================== -->
+    <div style="display: none;" class="preloader">
+        <div style="display: none;" class="status">
+            &nbsp;
+        </div>
+    </div>
+
+    <!-- =========================
+     SECTION: HOME / HEADER  
+    ============================== -->
+    <header style="background-position: 50% -40.5px;" class="header" data-stellar-background-ratio="0.5" id="home">
+
+        <!-- COLOR OVER IMAGE -->
+        <div class="overlay-layer">
+
+            <!-- STICKY NAVIGATION -->
+            <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <!-- LOGO ON STICKY NAV BAR -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#stamp-navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-grid-2x2"></span>
+                        </button>
+
+                        <!-- LOGO -->
+                        <a class="navbar-brand" href="#">
+                            <img src="resources/assets/img/logo_main.png" alt="">
+                        </a>
+
+                    </div>
+
+                    <!-- TOP BAR -->
+                    <div class="navbar-collapse collapse" id="stamp-navigation">
+
+                        <!-- NAVIGATION LINK -->
+                        <ul class="nav navbar-nav navbar-left main-navigation small-text">
+                            <li class="not-active"><a href="#section1">Why?</a>
+                            </li>
+                            <li class=""><a href="#section2">What?</a>
+                            </li>
+                            <li class=""><a href="#section3">How?</a>
+                            </li>
+                            <li class=""><a href="#section4">Working on</a>
+                            </li>
+                            <li class=""><a href="#section5">About</a>
+                            </li>
+                            <!-- <li><a href="http://example.com" class="external">External Link Example</a></li> -->
+                        </ul>
+
+                        <!-- LOGIN REGISTER -->
+                        <ul class="nav navbar-nav navbar-right login-register small-text">
+                            <!--
+                            <li style="display: block;" class="login js-login"><a href="#">Login</a>
+                            </li>
+-->
+                            <li style="display: block;" class="login js-login dropdown"><a aria-expanded="false" role="button" href="#" data-toggle="dropdown" class="dropdown-toggle">Sign in <span class="caret"></span></a>
+                  	
+					<ul role="menu" class="dropdown-menu">
+						<li>
+                            
+                    
+						<div style="padding: 15px; padding-bottom: 0px;">
+							<form accept-charset="UTF-8" action="login" method="post">
+								<input type="text" name="username" id="username" placeholder="Username" style="margin-bottom: 15px;">
+								<input type="password" name="password" id="password" placeholder="Password" style="margin-bottom: 15px;">
+								<input type="checkbox" value="1" id="remember-me" name="remember-me" style="float: left; margin-right: 10px;">
+								<label for="sign-in" class="string optional"> Remember me</label>
+								<input type="submit" value="Sign In" id="sign-in" class="btn btn-info btn-block">
+								<label style="text-align:center;margin-top:5px">or</label>
+                                <input type="button" value="Sign In with Google" id="sign-in-google" class="btn btn-primary btn-block">
+								<input type="button" value="Sign In with Twitter" id="sign-in-twitter" class="btn btn-primary btn-block">
+							</form>
+						</div>      
+                            
+						</li>
+						</ul>
+					</li>
+                            
+                            
+                            
+                            <li style="display: none;" class="register-button js-register inpage-scroll"><a href="#home" class="navbar-register-button">Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /END CONTAINER -->
+            </div>
+            <!-- /END STICKY NAVIGATION -->
+
+            <!-- CONTAINER -->
             <div class="container">
-                <div class="blockquote-reverse">
-                    <div class="has-error help-block  has-feedback">
-                        {% if flag %}
-                        <p>User not found: Please try again!</p>
-                        {% endif %}
-                      
+
+                <!-- ONLY LOGO ON HEADER 
+		              <div class="only-logo">
+			             <div class="navbar">
+				                <div class="navbar-header">
+					               <img src="images/logo-2.png" alt="">
+				                </div>
+			             </div>
+		              </div>
+		              /END ONLY LOGO ON HEADER -->
+
+                <div class="row">
+                    <div class="col-md-7 text-left">
+
+                        <!-- HEADING AND BUTTONS -->
+                        <div class="intro-section">
+
+                            <!-- WELCOM MESSAGE -->
+                            <h1 class="intro white-text">Analyze your Scratch projects </h1>
+                            
+                            <p class="transparent-text">Welcome to the Dr. Scratch website, an analytical tool that evaluates your Scratch projects in a variety of computational areas. We provide feedback on aspects such as abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation.
+
+    This analyzer is a helpful tool to evaluate your own projects, or those of your Scratch students.</p>
+                            
+                            <!-- BUTTON -->
+                            <div class="button hidden-xs">
+                                <a href="#section1" class="btn btn-primary secondary-button">Learn More</a>
+                            </div>
+                            <!-- /END BUTTON -->
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-5 pull-right">
+                        
+                        <!-- VERTICAL PROJECT FORM -->
+                        <div class="vertical-project-form">
+                            
+                            <h4 class="dark-text form-heading">Analyze your Scratch Project now!</h4>
+                            
+                            <form class="project-form" id="project-form">
+
+                                <input value="Upload your proyect" id="cf-file" name="file" type="file" class="filestyle" data-buttonText="Choose Project">
+
+                             <!--   <input value="Name" id="cf-name" name="name" class="form-control input-box placeholder" placeholder="Name" type="text"> 
+                                
+                                <input value="Email" id="cf-email" name="email" class="form-control input-box placeholder" placeholder="Email" type="email">
+                                
+                                <textarea name="message" id="cf-message" class="form-control textarea-box placeholder" rows="4" placeholder="Message">Message</textarea> -->
+                                
+                                <button class="btn btn-primary standard-button">Analyze!</button>
+                                
+                            </form>
+                            
+                            <!-- FORM SUBMIT SUCCESS / ERROR MESSAGES 
+                            <p class="file-success dark-text small-text"><span class="icon-check-alt2 colored-text"></span>Email sent successfully</p> -->
+                            <p class="file-error dark-text small-text"><span class="icon-close-alt2"></span> Error! Please check all fields filled correctly</p>
+                            <!-- MAILCHIMP ALERTS 
+			        <p class="mailchimp-success dark-text"><span class="icon-check-alt2 colored-text"></span>We sent the confirmation to your email</p>
+			        <p class="mailchimp-error dark-text"><span class="icon-close-alt2"></span>Error! Please check all fields filled correctly</p>
+			        -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+     SECTION: CLIENTS LOGOs
+    ============================== -->
+    <div class="clients white-bg">
+        <ul class="client-logos">
+            <li>
+                <a href="">
+                <img src="http://programamos.es/web/wp-content/uploads/2014/09/ProgramamosLogo.png" alt="">
+                </a>            
+            </li>
+            <li>
+                <img src="resources/assets/img/logoURJC.jpg" alt="">
+            </li>
+            <li>
+                <img src="http://gsyc.urjc.es/~mvidal/images/libresoft.jpg" alt="">
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- =========================
+     SECTION: Why
+    ============================== -->
+    <section class="services grey-bg" id="section1">
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+
+                <div class="small-text-medium uppercase colored-text">
+                    WHY?
+                </div>
+                <h2 class="dark-text"><strong>Why</strong> you’ll love Dr.Scratch</h2>
+                <div class="colored-line">
+                </div>
+                <div class="sub-heading">
+                    Powerful tool to analyze your Scratch projects.
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- SINGLE SERVICE -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInLeft;" class="col-md-4 wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service border-bottom-hover">
+                        <div class="service-icon colored-text">
+                            <span class="icon-basic-webpage-multiple"></span>
+                        </div>
+                        <h3 class="colored-text">Simple & Fun</h3>
+                        <p>
+                            Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div style="visibility: visible; animation-duration: 1s; animation-name: flipInY;" class="col-md-4 wow flipInY animated" data-wow-offset="10" data-wow-duration="1s">
+                    <div class="single-service border-bottom-hover">
+                        <div class="service-icon colored-text">
+                            <span class="icon-ecommerce-graph3"></span>
+                        </div>
+                        <h3 class="colored-text">Improve your skills</h3>
+                        <p>
+                            Coworking viral landing page user base minimum viable product hackathon API mashup FB Connect.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInRight;" class="col-md-4 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service border-bottom-hover">
+                        <div class="service-icon colored-text">
+                            <span class="icon-creative-commons"></span>
+                        </div>
+                        <h3 class="colored-text">GPL License</h3>
+                        <p>
+                            Social bookmarking group buying crowded market pivot onboarding freemium prototype ping.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+     SECTION: WHAT (BRIEF RIGHT)
+    ============================== -->
+    <section class="brief grey-bg text-left" id="section2">
+        <div class="container">
+            <div class="row">
+
+                <!-- BRIEF IMAGE -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInLeft;" class="col-md-6 wow fadeInLeft animated" data-wow-offset="20" data-wow-duration="1.75s">
+                    <div class="brief-image-left">
+                        <img src="resources/assets/img/imac-ipad2x.png" alt="" height="468" width="527">
+                    </div>
+                </div>
+
+                <!-- BRIEF HEADING -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInRight;" class="col-md-6 content-section wow fadeInRight animated" data-wow-offset="20" data-wow-duration="1.75s">
+                    <div class="small-text-medium uppercase colored-text">
+                        WHAT
+                    </div>
+                    <h2 class="text-left dark-text"><strong>Dr.Scratch</strong> in action</h2>
+                    <div class="colored-line-left">
+                    </div>
+                    <p class="text-left">
+                        Lorem lean startup ipsum product market fit customer development.
+                    </p>
+
+                    <!-- FEATUR ACCORDION WITH ICON -->
+                    <div class="panel-group" id="accordion">
+
+                        <!-- SINGLE ACORDIION -->
+                        <div class="panel panel-default">
+
+                            <!-- ACORDIION HEADING / TITLE -->
+                            <div class="panel-heading" id="headingOne">
+                                <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						<span class="icon-container color-bg"><span class="icon-map-alt white-text"></span></span><span class="title-text">Responsive Design</span>
+						</a>
+						</h4>
+                            </div>
+
+                            <!-- ACORDIION DESCRIPTION / TEXT -->
+                            <div style="height: 0px;" aria-expanded="false" id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Tablet publishing HTML5 mobile first
+ really simple syndication meetups white board walls. User experience 
+iterate algorithm gamification semantic web value add market research 
+stealth.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SINGLE ACORDIION -->
+                        <div class="panel panel-default">
+
+                            <!-- ACORDIION HEADING / TITLE -->
+                            <div class="panel-heading" id="headingTwo">
+                                <h4 class="panel-title">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						<span class="icon-container color-bg"><span class="icon-compass-alt white-text"></span></span><span class="title-text">Fast Customer Support</span>
+						</a>
+						</h4>
+                            </div>
+
+                            <!-- ACORDIION DESCRIPTION / TEXT -->
+                            <div style="height: 0px;" aria-expanded="false" id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Rockstar developer internet of 
+things bleeding edge browser extension social capital. Sandboxing UDID 
+content manag system ruby on rails continuous deployment big data 
+infographic.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SINGLE ACORDIION -->
+                        <div class="panel panel-default">
+
+                            <!-- ACORDIION HEADING / TITLE -->
+                            <div class="panel-heading" id="headingThree">
+                                <h4 class="panel-title">
+						<a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<span class="icon-container color-bg"><span class="icon-lightbulb-alt white-text"></span></span><span class="title-text">Creative Concept</span>
+						</a>
+						</h4>
+                            </div>
+
+                            <!-- ACORDIION DESCRIPTION / TEXT -->
+                            <div style="" aria-expanded="true" id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Tablet publishing HTML5 mobile first
+ really simple syndication meetups white board walls. User experience 
+iterate algorithm gamification semantic web value add market research 
+stealth.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- =========================
+     SECTION: WHAT (BRIEF LEFT)
+    ============================== -->
+    <section class="brief white-bg-border text-left" id="section3">
+        <div class="container">
+            <div class="row">
+
+                <!-- BRIEF IMAGE -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInLeft;" class="col-md-6 pull-right wow fadeInLeft animated" data-wow-offset="20" data-wow-duration="1.75s">
+                    <div class="brief-image-right">
+                        
+                        <div class="js-video [vimeo, widescreen]">
+                            <iframe src="//player.vimeo.com/video/114430745" width="500" height="333" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe>
+                        </div> 
+                        
+                        <!--
+                        <img src="assets/img/about-us.jpg" alt=""> -->
+                    </div>
+                </div>
+
+                <!-- BRIEF HEADING -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInRight;" class="col-md-6 content-section pull-left wow fadeInRight animated" data-wow-offset="20" data-wow-duration="1.75s">
+                    <div class="small-text-medium uppercase colored-text">
+                        How
+                    </div>
+                    <h2 class="text-left dark-text"><strong>How</strong> does it works </h2>
+                    <div class="colored-line-left">
+                    </div>
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet, consectetur 
+adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                    <!-- FEATURE LIST -->
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <ul class="feature-list text-left">
+                                <li><span class="icon-lock-alt colored-text"></span> We care your businnes</li>
+                                <li><span class="icon-check-alt2 colored-text"></span> Skilled professionals</li>
+                                <li><span class="icon-paperclip colored-text"></span> Lorem ipsum dolor</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <ul class="feature-list text-left">
+                                <li><span class="icon-paperclip colored-text"></span> Startup ipsum does</li>
+                                <li><span class="icon-adjust-vert colored-text"></span> Flexible schedule</li>
+                                <li><span class="icon-ribbon-alt colored-text"></span> Certified company</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+     SECTION: BENEFITS   
+    ============================== -->
+    <section class="unique-features white-bg" id="section4">
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text">
+                    NEW FEATURES
+                </div>
+                <h2 class="dark-text"><strong>Coming</strong> Soon</h2>
+                <div class="colored-line">
+                </div>
+                <div class="sub-heading">
+                    We are working on new features to improving Dr.Scratch
+                    
+                </div>
+            </div>
+
+            <!-- FIRST ROW OF FEATURES -->
+            <div class="row">
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInRight;" class="col-md-4 wow fadeInRight animated" data-wow-duration="1.75s" data-wow-offset="20">
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-laptop colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">Reliable Company</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-map-alt colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">Responsive Design</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-cloud-alt colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">Cloud Platform</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IPAD IMAGE -->
+                <div class="col-md-4">
+                    <div style="visibility: visible; animation-duration: 1.75s; animation-name: bounceIn;" class="ipad-image wow bounceIn animated" data-wow-duration="1.75s" data-wow-offset="20">
+                        <img src="resources/assets/img/ipad-air2x.png" alt="" height="506" width="360">
+                    </div>
+                </div>
+
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInLeft;" class="col-md-4 wow fadeInLeft animated" data-wow-duration="1.75s" data-wow-offset="20">
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-gift-alt colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">Bootstrap 3.3.1</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-star-alt colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">400+ Icons Font</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SINGLE FEATURE -->
+                    <div class="feature">
+                        <div class="icon-container">
+                            <span class="icon-chat-alt colored-text"></span>
+                        </div>
+                        <div class="description text-left">
+                            <h4 class="dark-text">Top Support</h4>
+                            <div class="grey-line-short pull-left">
+                            </div>
+                            <p class="text-left">
+                                User engagement A/B testing shrink a market venture capital pitch deck.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- =========================
+     SECTION: TEAM   
+    ============================== -->
+    <section class="team grey-bg" id="section5">
+        <div class="container">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text">
+                    Team
+                </div>
+                <h2 class="dark-text"><strong>Dr. Scratch</strong> Team</h2>
+                <div class="colored-line">
+                </div>
+                <div class="sub-heading">
+                    Cloud computing subscription model out of the box proactive solution.
+                </div>
+            </div>
+
+            <!-- MEMBERS -->
+            <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeIn;" class="row wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.75s">
+
+                <!-- MEMBER -->
+                <div class="col-md-3 col-sm-6">
+                    <div style="visibility: visible; animation-duration: 1s; animation-name: flipInY;" class="team-member wow flipInY animated" data-wow-offset="10" data-wow-duration="1s">
+                        <div class="member-pic">
+                            <img src="resources/assets/img/12x.jpg" alt="" height="253" width="253">
+                        </div>
+                        <div class="member-details">
+                            <h5 class="colored-text">Albert Jacobs</h5>
+                            <div class="small-text">
+                                Founder &amp; CEO
+                            </div>
+                        </div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-facebook dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-twitter dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-pinterest dark-text"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MEMBER -->
+                <div class="col-md-3 col-sm-6">
+                    <div style="visibility: visible; animation-duration: 1s; animation-name: flipInY;" class="team-member wow flipInY animated" data-wow-offset="10" data-wow-duration="1s">
+                        <div class="member-pic">
+                            <img src="resources/assets/img/22x.jpg" alt="" height="253" width="253">
+                        </div>
+                        <div class="member-details">
+                            <h5 class="colored-text">George Walker</h5>
+                            <div class="small-text">
+                                Web Developer
+                            </div>
+                        </div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-facebook dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-twitter dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-pinterest dark-text"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MEMBER -->
+                <div class="col-md-3 col-sm-6">
+                    <div style="visibility: visible; animation-duration: 1s; animation-name: flipInY;" class="team-member wow flipInY animated" data-wow-offset="10" data-wow-duration="1s">
+                        <div class="member-pic">
+                            <img src="resources/assets/img/32x.jpg" alt="" height="253" width="253">
+                        </div>
+                        <div class="member-details">
+                            <h5 class="colored-text">Frank Hanson</h5>
+                            <div class="small-text">
+                                UI Designer
+                            </div>
+                        </div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-facebook dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-twitter dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-pinterest dark-text"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MEMBER -->
+                <div class="col-md-3 col-sm-6 team-member">
+                    <div style="visibility: visible; animation-duration: 1s; animation-name: flipInY;" class="wow flipInY animated" data-wow-offset="10" data-wow-duration="1s">
+                        <div class="member-pic">
+                            <img src="resources/assets/img/42x.jpg" alt="" height="253" width="253">
+                        </div>
+                        <div class="member-details">
+                            <h5 class="colored-text">Emily Smith</h5>
+                            <div class="small-text">
+                                App Developer
+                            </div>
+                        </div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-facebook dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-twitter dark-text"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-social-pinterest dark-text"></span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-	        <div class="container">
-		<img src="/resources/images/logo_main.png">
-        <h1></h1>
-		<p>Welcome to the Dr. Scratch website, an analytical tool that evaluates your Scratch projects in a variety of computational areas. We provide feedback on aspects such as abstraction, logical thinking, synchronization, parallelization, flow control, user interactivity and data representation. </p>
-		<p>This analyzer is a helpful tool to evaluate your own projects, or those of your Scratch students.</p>
-	    	<form method="post" enctype="multipart/form-data" accept-charset="utf-8" action="/uploadUnregistered">
-				{% csrf_token %}
-                <br></br>
 
-				<div class="col-md-4">
-					<input name="zipFile" type="file" class="filestyle" data-buttonName="btn btn-primary">
-					<input name = "prueba" type="submit" value="Submit" class="btn btn-primary">
-				</div>
+        </div>
+    </section>
 
-			</form>
-	      </div>
-	    </div>
+    <!-- =========================
+     SECTION: TESTIMONIALS   
+    ============================== -->
+    <section class="testimonials white-bg" id="section6">
+        <div class="container">
 
-	    <div class="serviceBlock">
-		<div class="container">
-					
-				<div class="row">
-					<div class="col-md-4">
-						<div class="clearfix">
-							<i class="fa fa-info-circle"></i>
-							<div class="desc">								
-								<h4>Help</h4>
-								<p><a href="http://programamos.es/web/wp-content/uploads/2014/08/DrScratch1.pdf">Slides used in Scratch Conference, MIT 2014</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="clearfix">
-							<i class="fa fa-folder-open-o"></i>
-							<div class="desc">
-								<h4>Contact</h4>
-								<p>If you have any questions, comments or ideas to improve Dr. Scratch, please feel free to contact us:</p>
-								<p>jesus.moreno (at) programamos.es</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="clearfix">
-							<i class="fa fa-male"></i>
-							<div class="desc">
-								<h4>Community</h4>
-								<p>Join us! Meet other users and share experiences</p>
-							</div>
-						</div>
-					</div>
-				</div>
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <div class="small-text-medium uppercase colored-text">
+                    Testimonials
+                </div>
+                <h2 class="dark-text"><strong>Happy</strong> Users</h2>
+                <div class="colored-line">
+                </div>
+                <div class="sub-heading">
+                    Cloud computing subscription model out of the box proactive solution.
+                </div>
+            </div>
 
-				<hr>
-		</div>
-		</div>		
+            <div class="row no-gutters">
+
+                <!-- SINGLE FEEDBACK -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInLeft;" class="col-md-4 wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="feedback">
+                        <div class="pic-container">
+                            <img src="resources/assets/img/1.jpg" alt="">
+                        </div>
+                        <p>
+                            “Tablet publishing HTML5 mobile first really
+ simple syndication meetups white board walls. User experience iterate 
+algorithm gamification semantic web value add market research stealth.”
+                        </p>
+                        <h5 class="colored-text">-Eusebia Bărlâdeanu</h5>
+                        <div class="small-text">
+                            XYZ Interactive
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE FEEDBACK -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeIn;" class="col-md-4 wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="feedback border-left border-right">
+                        <div class="pic-container">
+                            <img src="resources/assets/img/2.jpg" alt="">
+                        </div>
+                        <p>
+                            “Rockstar developer internet of things 
+bleeding edge browser extension social capital. Sandboxing UDID content 
+manag system ruby on rails continuous deployment big data infographic.”
+                        </p>
+                        <h5 class="colored-text">- Eusebia Bărlâdeanu</h5>
+                        <div class="small-text">
+                            AbZ Network
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE FEEDBACK -->
+                <div style="visibility: visible; animation-duration: 1.75s; animation-name: fadeInRight;" class="col-md-4 wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div id="feedback">
+                        <div class="feedback">
+                            <div class="pic-container">
+                                <img src="resources/assets/img/3.jpg" alt="">
+                            </div>
+                            <p>
+                                “Rockstar developer internet of things 
+bleeding edge browser extension social capital. Sandboxing UDID content 
+manag system ruby on rails continuous deployment big data infographic.”
+                            </p>
+                            <h5 class="colored-text">- Georgian Hrușcă</h5>
+                            <div class="small-text">
+                                ZyX LLC
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+     SECTION: CALL TO ACTION   
+    ============================== -->
+    <section style="background-position: 50% 827.245px;" class="call-to-action" id="section7" data-stellar-background-ratio="0.1">
+        <div class="overlay-layer-2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <div class="uppercase colored-text strong">
+                            Are you a Dr.Scratch user?
+                        </div>
+
+                        <h2 style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;" class="white-text strong wow fadeInLeft animated" data-wow-duration="2s" data-wow-offset="40">Join now!</h2>
+
+                        <a style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;" href="#home" class="btn btn-primary standard-button inpage-scroll wow fadeInRight animated" data-wow-duration="2s" data-wow-offset="40" type="button">Get Started</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-	</body>
+    <!-- REGISTRATION FORM FOR POPUP BOX -->
+    <div class="modal fade bs-example-modal-sm" id="stamp-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="vertical-registration-form">
+                    <h4 class="dark-text form-heading">Get 1 Month FREE Trial Now</h4>
+                    <form class="registration-form" id="contact-form">
+                        <input value="Name" id="cf-name" name="name" class="form-control input-box placeholder" placeholder="Name" type="text">
+                        <input value="Email" id="cf-email" name="email" class="form-control input-box placeholder" placeholder="Email" type="email">
+                        <input value="Subject" id="cf-subject" name="subject" class="form-control input-box placeholder" placeholder="Subject" type="text">
+                        <textarea name="message" id="cf-message" class="form-control textarea-box placeholder" rows="4" placeholder="Message">Message</textarea>
+                        <button class="btn btn-primary standard-button">Get Started</button>
+                    </form>
+                    <p class="email-success dark-text">
+                        <span class="icon-check-alt2 colored-text"></span>Email sent seuccessfully
+                    </p>
+                    <p class="email-error dark-text">
+                        <span class="icon-close-alt2"></span>Error! Please check all fields filled correctly
+                    </p>
+                    <!-- MAILCHIMP ALERTS 
+			        <p class="mailchimp-success dark-text"><span class="icon-check-alt2 colored-text"></span>We sent the confirmation to your email</p>
+			        <p class="mailchimp-error dark-text"><span class="icon-close-alt2"></span>Error! Please check all fields filled correctly</p>
+			        -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-</html>
+    <!-- =========================
+     SECTION: CONTACT INFO  
+    ============================== -->
+    <div class="contact-info white-bg">
+        <div class="container">
+
+            <!-- CONTACT INFO -->
+            <div class="row contact-links">
+
+                <div class="col-sm-4">
+                    <div class="icon-container">
+                        <span class="icon-basic-mail colored-text"></span>
+                    </div>
+                    <a href="mailto:drscratch@programamos.es" class="strong">drscratch@programamos.es</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="icon-container">
+                        <span class="icon-social-twitter colored-text"></span>
+                    </div>
+                    <a href="https://twitter.com/drscratchtool" class="strong">@drscratchtool</a>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="icon-container">
+                        <span class="icon-basic-tablet colored-text"></span>
+                    </div>
+                    <a href="https://github.com/jemole/drScratch/issues" class="strong">GitHub (issues)</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer grey-bg">
+        ©2014 Dr.Scratch is powered by <a href="https://github.com/ucsb-cs-education/hairball" class="dark-text">Hailball</a>
+
+        <!-- OPTIONAL FOOTER LINKS -->
+        <ul class="footer-links small-text">
+            <li><a href="" class="dark-text">About</a>
+            </li>
+            <li><a href="" class="dark-text">Terms</a>
+            </li>
+            <li><a href="" class="dark-text">Privacy</a>
+            </li>
+        </ul>
+
+        <!-- SOCIAL ICONS -->
+        <ul class="social-icons">
+            <li><a href="https://twitter.com/drscratchtool"><span class="icon-social-twitter transparent-text-dark"></span></a>
+            </li>
+            <li><a href=""><span class="icon-social-github transparent-text-dark"></span></a>
+            </li>
+            
+        </ul>
+
+    </footer>
+
+
+    <!-- =========================
+     SCRIPTS   
+    ============================== -->
+    <script src="resources/assets/js/jquery.min.js"></script>
+    <script>
+        /* PRE LOADER */
+        jQuery(window).load(function () {
+            "use strict";
+            jQuery(".status").fadeOut();
+            jQuery(".preloader").delay(1000).fadeOut("slow");
+        })
+    </script>
+    <script type="text/javascript" src="resources/assets/js/bootstrap-filestyle.js"> </script>
+    <script src="resources/assets/js/smoothscroll.js"></script>
+    <script src="resources/assets/js/bootstrap.js"></script>
+    <script src="resources/assets/js/jquery.nav.js"></script>
+    <script src="resources/assets/js/wow.js"></script>
+    <script src="resources/assets/js/nivo-lightbox.js"></script>
+    <script src="resources/assets/js/owl.js"></script>
+    <script src="resources/assets/js/jquery.js"></script>
+  <!--  <script src="assets/js/retina.js"></script> -->
+    <script src="resources/assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- GOGLE MAP -->
+    <!--
+    <script src="https://maps.googleapis.com/maps/api/js"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/19/5/intl/es_ALL/main.js"></script>
+-->
+
+    <!-- CUSTOM JS  -->
+    <script src="resources/assets/js/custom.js"></script>
+
+
+
+
+</body></html>
